@@ -1793,7 +1793,7 @@ ul.prepend(newLi);
 //OBS2= O append adiciona um 'texto' no final do elemento selecionado, já o appendChild adiciona um 'elemento' no final do elemento 'pai' selecionado.
 */
 
-//MANIPULANDO ELEMENTO 3
+/*MANIPULANDO ELEMENTO 3
 
 function clicou (){  
   const teste = document.querySelector('#teste')
@@ -1840,6 +1840,81 @@ function clicou (){
   ul.after(newUl);   // chama o elemento criado. 
 }
 
+*/
 
 
+/*MANIPULANDO ATRIBUTOS
 
+//criamos no html um input com 3 atributos quais irei manipular..
+
+function clicou (){
+  const input =document.querySelector('input');
+//console.log (input.getAttribute ('placeholder'));  //aqui é só para confirmar o que tem dentro do placeholder
+
+
+//vamos começar a pegar os atributos dos elementos.
+//os atributos sao as propiedades de um elemento ex: type, placeholder, name ...
+
+   //   console.log(input.getAttribute('type')); // no lugar de type colocamos o atributo que queremos saber
+  //   }
+//na linha acima vimos se tem um atributo ou o que tem dentro do atributo type.
+//neste caso com o retorno : text 
+
+//como saber se este input tem placeholder?
+
+if (input.hasAttribute('placeholder')){
+  console.log('Tem placeholder sim');
+} else{
+  console.log('Não tem placeholder');
+}
+}
+//neste caso o retorno é: tem placeholde sim  
+
+
+// Agora vejamos o uso do setAttribute que é utilizado para adcionar um atributo ou se já existir, ele altera.
+function clicou (){
+  const input =document.querySelector('input');
+
+ // input.setAttribute('placeholder', 'Placeholder alterado'); }
+
+//quando clica no botao mostra sua alteraçao no placeholder
+
+//vamos fazer uma brincadeira. vamos trocar no html o clique aqui para mostrar senha
+//vamos alterar os parametros, sendo assim o type  para text mas antes disso
+//mudar o type text do html para type password. obg: mudamos o placeholder para digite sua senha.(ante era clique aqui).
+input.setAttribute('type', 'text');
+}
+
+//no retorno, nos digitamos nossa senha, mas ao clicar no botao, ele retorna em texto
+
+// agora vamos fazer a  troca de indo e voltando
+
+function clicou (){
+  const input =document.querySelector('input');
+  if (input .getAttribute ('type') === 'text'){
+     input.setAttribute('type', 'password');
+  } else {
+    input.setAttribute('type', 'text');
+  }
+}
+
+*/
+//ao clicar no botao, ele mostra sua senha. clicando novamente ele esconde a senha.
+
+//vamos trocar o texto do botão:
+
+function clicou (){
+  const input =document.querySelector('input');
+  const botao = document.querySelector('.botao');
+
+  if (input .getAttribute ('type') === 'text'){
+     input.setAttribute('type', 'password');
+     botao.innerText = "mostrar Senha";
+  } else {
+    input.setAttribute('type', 'text');
+    botao.innerText = "Ocultar senha"; //innerText é o texto dentro do elemento
+  }
+}
+//o retorno ao clicar o digitar a senha e clicar no botao é mostrar a senha
+//e mudar o texto do botao para "ocultar senha." sendo assim
+//ao clicar novamente ele oculta a senha... fizemos aqui o efeito de vai e vem. :)
