@@ -1677,7 +1677,7 @@ n4.addEventListener ("click", ()=>{
 }) */
 
 
-//MANIPULANDO ELEMENTOS 1
+/*MANIPULANDO ELEMENTOS 1
 
 //Para alterar alguma coisa o 1 passo é selecionar o elemento -->
 //obs: lembrando que vamos deixar ativo a função no html no botao. que a função so
@@ -1732,3 +1732,53 @@ function clicou (){
 console.log(ul.outerHTML); } 
 //retorna todo conteudo no console levando em consideração o propio elemento tbm
 */
+
+/*MANIPULANDO ELEMENTOS 2
+
+function clicou (){  
+  const teste = document.querySelector('#teste')
+  const ul =teste.querySelector('ul');
+
+  ul.children[0].append("(alterado)");
+}
+
+//usando o append nós estaremos adcionando algo ao nosso elemento, 
+//alem de alterar ele adciona sem excluir o nosso item e sem mexer na memória.
+
+//exemplo no retorno do console o primeiro  item da li ficará -> Item 1 (alterado)
+// ou seja o item 1 + o item adcionado através do append.
+// a diferença de uso do innerHTML para o append é que, o innerHTML se for uisado para adcionar
+// ele excluira da memoria todo conteudo e adcionara tudo novmente mais o item adcionado de alteração.
+//vamos supor que eu preciso adcionar um item de uma longa lista. e uso o inner..
+// ele vai excluir todo meus itens pra depois adcionar estes itens novamente + o itenm que eu queria adcionar ,muito trabalho não?
+*/
+
+//Pra adcionar um elemento usando o appendchild:
+//primeiro precisa criar o elemento na memoria pra depois usar o appendchild:
+
+function clicou (){  
+  const teste = document.querySelector('#teste')
+  const ul = teste.querySelector('ul');
+
+  let newLi = document.createElement("li"); // agora tem um elemnto criado um li sem nada
+   newLi.innerText = "Item adcionado"; //adcionando conteudo dentro dele. ate aqui criamos um elemento
+   
+   ul.appendChild(newLi);
+  }
+//Outro metodo é :
+
+function clicou (){  
+  const teste = document.querySelector('#teste')
+  const ul = teste.querySelector('ul');
+
+  ul.innerHTML += "<li> Item Adcionado</li>";
+
+}
+// porém como explicado anteriormente, ele passa por um p´rocesso de exclusao para aadcicionar todos os itens novamente indivualmente.
+//com poucos itens nao faz muita diferença, mas se for o caso de mil itens, a diferença vai ser bem relativa.
+//entao a forma correta para adcionar um elemento é usando o appenChild :)
+
+let newLi = document.createElement("li"); 
+newLi.innerText = "Item adcionado"; 
+ul.appendChild(newLi);
+}
