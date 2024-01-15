@@ -1751,7 +1751,7 @@ function clicou (){
 // ele excluira da memoria todo conteudo e adcionara tudo novmente mais o item adcionado de alteração.
 //vamos supor que eu preciso adcionar um item de uma longa lista. e uso o inner..
 // ele vai excluir todo meus itens pra depois adcionar estes itens novamente + o itenm que eu queria adcionar ,muito trabalho não?
-*/
+
 
 //Pra adcionar um elemento usando o appendchild:
 //primeiro precisa criar o elemento na memoria pra depois usar o appendchild:
@@ -1780,5 +1780,66 @@ function clicou (){
 
 let newLi = document.createElement("li"); 
 newLi.innerText = "Item adcionado"; 
-ul.appendChild(newLi);
+ul.append(newLi);
 }
+
+//OBS: Quando usamos appendChild -> é adciona um item no final da lista 
+//mas e se eu quiser adcionar como primeiro?
+//sendo assim usamos prepend :
+
+ul.prepend(newLi);
+}
+
+//OBS2= O append adiciona um 'texto' no final do elemento selecionado, já o appendChild adiciona um 'elemento' no final do elemento 'pai' selecionado.
+*/
+
+//MANIPULANDO ELEMENTO 3
+
+function clicou (){  
+  const teste = document.querySelector('#teste')
+  const ul = teste.querySelector('ul');
+
+
+  const newButton = document.createElement('button');
+  newButton.innerHTML = "Botão"
+
+  ul.before(newButton);
+
+  const newTitle = document.createElement('h1');
+  newTitle.innerHTML = "title";
+
+  ul.after(newTitle);
+
+
+
+  const newDiv = document.createElement('div');
+  newDiv.innerHTML ="Nova Div";
+
+  ul.after(newDiv);
+
+}
+
+// QUE TAL CRIAR UM NOVO ELEMENTO exemplo o  <li> uma lista? 
+// pra isso  QUE TAL USAR O LOOP, para criar esta lista?
+//let's go!!
+
+
+function clicou (){  
+  const teste = document.querySelector('#teste')
+  const ul = teste.querySelector('ul');
+
+
+
+  let newUl = document.createElement('ul');   //cria primeiro o elemento
+
+  for (let i = 0; i < 5; i++) {              // depois oq vai ter dentro
+    let newLi =document.createElement('li');
+    newLi.innerHTML ="item add " + i;
+    newUl.append(newLi);
+  }
+  ul.after(newUl);   // chama o elemento criado. 
+}
+
+
+
+
