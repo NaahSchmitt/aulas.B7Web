@@ -1936,9 +1936,9 @@ function clicou (){
 */
 
 
-//TRABALHANDO COM CLASSES
+/*TRABALHANDO COM CLASSES
 
-/*function clicou (){
+function clicou (){
   const button =document.querySelector('button');
 
   button.classList.add('Azul');     //adc
@@ -1969,7 +1969,7 @@ function clicou (){
 
   button.classList.toggle('Azul');
 }
-*/
+
 //podemos só trocar a class usando replace :
 function clicou (){
   const button = document.querySelector('button'); 
@@ -1981,4 +1981,29 @@ function clicou (){
   }
 
 }
-//usando o replace de modo mais simplificado do que usar o add e remove :)
+//usando o replace de modo mais simplificado do que usar o add e remove :)  */
+
+/*EVENTOS DE TECLADO 1
+
+//existem duas formas de colocar estes eventos, 1 no html e 2- no javascript.
+//vamos ver a primeira forma utilizada no html: (no input)
+
+function apertou(){
+  console.log("APERTOU");
+}
+function segurou(){
+  console.log("SEGUROU");
+}
+function soltou(){
+  console.log("SOLTOU");
+}
+
+//toda vez que voce no input digita, digita segura e solta, vai mostrar no console quantas vzs vc fez.
+//agora vamos colocar o evento em todo documento usando o JS.
+
+const input = document.querySelector ('input');
+input.addEventListener()  //forma de colocar no input
+
+document.addEventListener('keyup', soltou);
+//neste exemplo usamos o evento Keyup, quando digitamos sem precisa clicar no input ele tem um retorno no console.
+*/
