@@ -1920,7 +1920,7 @@ function clicou (){
 //ao clicar novamente ele oculta a senha... fizemos aqui o efeito de vai e vem. :)
 */
 
-//MANIPULANDO O CSS :)
+/*MANIPULANDO O CSS :)
 
 function clicou (){
   const li = document.querySelector('li');
@@ -1932,3 +1932,53 @@ function clicou (){
 
 //Aqui usamos o style para estilizar com o elemento à frente qual vai ser alterado. 
 //E uma observação, nao usamos o - como Font-size. usamos a palavra junta e a primeira letra da segunda palavra em Maiuscula.
+
+*/
+
+
+//TRABALHANDO COM CLASSES
+
+/*function clicou (){
+  const button =document.querySelector('button');
+
+  button.classList.add('Azul');     //adc
+ // button.classList.remove('verde');   //remove
+
+ //  para verificar quais class existem em um elemento usamos : console.log(button.classList);
+}
+
+//Agora vamos fazer uma brincadeira, que ao clicar vai adc uma class e ao clicar novamente vai remover.
+
+function clicou (){
+  const button =document.querySelector('button');
+
+  if (button.classList.contains('azul')){ //Se o elemento button contém a class azul..
+    button.classList.remover('azul');  // iráa remover o azul e add o verde
+    button.classList.add('verde');
+  } else{
+    button.classList.add('azul');        //caso contrario (ao clicar o botao novamente) vai add azul e remover o verde :D
+    button.classList.remove('verde');
+  }
+
+}
+
+//Existe outra função que simplifica este código de adc e remover:
+
+function clicou (){
+  const button =document.querySelector('button'); 
+
+  button.classList.toggle('Azul');
+}
+*/
+//podemos só trocar a class usando replace :
+function clicou (){
+  const button = document.querySelector('button'); 
+
+  if(button.classList.contains('amarelo')){
+    button.classList.replace('amarelo', 'vermelho');
+  }else {
+    button.classList.replace('vermelho', 'amarelo');
+  }
+
+}
+//usando o replace de modo mais simplificado do que usar o add e remove :)
