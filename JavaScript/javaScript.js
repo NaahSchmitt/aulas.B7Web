@@ -1898,7 +1898,7 @@ function clicou (){
   }
 }
 
-*/
+
 //ao clicar no botao, ele mostra sua senha. clicando novamente ele esconde a senha.
 
 //vamos trocar o texto do botão:
@@ -1918,3 +1918,17 @@ function clicou (){
 //o retorno ao clicar o digitar a senha e clicar no botao é mostrar a senha
 //e mudar o texto do botao para "ocultar senha." sendo assim
 //ao clicar novamente ele oculta a senha... fizemos aqui o efeito de vai e vem. :)
+*/
+
+//MANIPULANDO O CSS :)
+
+function clicou (){
+  const li = document.querySelector('li');
+
+  li.style.backgroundColor = '#00f';
+  li.style.fontSize = '15px';
+  li.style.color = '#ccc';
+}
+
+//Aqui usamos o style para estilizar com o elemento à frente qual vai ser alterado. 
+//E uma observação, nao usamos o - como Font-size. usamos a palavra junta e a primeira letra da segunda palavra em Maiuscula.
