@@ -2006,4 +2006,37 @@ input.addEventListener()  //forma de colocar no input
 
 document.addEventListener('keyup', soltou);
 //neste exemplo usamos o evento Keyup, quando digitamos sem precisa clicar no input ele tem um retorno no console.
+
 */
+
+/*EVENTOS DE TECLADO 2
+
+//vamos seguir com o conteudo anterior, porem usaremos no input:
+
+function soltou(event){
+    console.log(event.code); // quando usa o code ele mostra detalhadamente qual tecla foi clicada ex: shiftright
+}                //tambem tem o key sendo mais simplorio, se clico shift, ele nao mostra qual shift eu cliquei se foi a direita ou da esquerda.
+
+const input = document.querySelector('input');
+ input.addEventListener('keyup', soltou);
+ // quando o keyup executa ele sempre vai mandar no parametro dessa função
+ // o event tem detalhes do que aconteceu. pode ser event ou apenas e que funciona.
+ // ao clicar no input o retorno no console mostra qual tecla foi clicada.
+
+ */
+ //pra saber se determinada tecla estava sendo pressionada, faremos assim: ele retornara um boolean:
+
+ function soltou(event){
+  console.log('TECLA PRESSIONADA: '+ event.code); // tanto o code quanto o key servem para saber o que aconteceu..
+  console.log('SHIFT?'+ event.shiftKey);   // e esses sao os auxiliares pra saber se determianada tecla foi ou nao pressionada.
+  console.log('ALT?' + event.altkey);
+  console.log('CTRL?' + event.ctrlkey);  //posso fazer com qualquer tecla
+  console.log('--');
+
+ }
+ const input = document.querySelector('input');
+ input.addEventListener('keyup', soltou);
+
+ //Retorno : TECLA PRESSIONADA: KeyH
+          // javaScript.js:2031 SHIFT?true
+//aqui se eu clico e solto o shift retorna como false, mas se eu pressiono e seguro ele retorna como true, mas ao soltar ele retorna um outro evento como false.
