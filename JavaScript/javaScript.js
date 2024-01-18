@@ -2088,3 +2088,18 @@ que se assemelha à maneira como as coisas funcionam no mundo real.
 -CLASSES
 -FUNÇÕES/ OBJETOS  */
 
+
+//Classes: Construtor e This
+
+//vamos criar primeiro um template (objeto)
+//uma classe de uma pessoa, depois vamos criar objetos.(joao,maria,ana,etc)
+//e todos eles vao seguir o template que vamos criar.
+//vamos trabalhar com propiedades (caracteristicas: nome etc) e   metodos
+
+class Person{       //criei uma class
+   constructor (name, age){  //e criei um construtor//Propiedades
+       this.name = name;
+       this.age = age;
+   }
+}
+//está criado o template. Na Proxima aula criaremos a instancia o objeto.
