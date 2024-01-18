@@ -2023,7 +2023,7 @@ const input = document.querySelector('input');
  // o event tem detalhes do que aconteceu. pode ser event ou apenas e que funciona.
  // ao clicar no input o retorno no console mostra qual tecla foi clicada.
 
- */
+
  //pra saber se determinada tecla estava sendo pressionada, faremos assim: ele retornara um boolean:
 
  function soltou(event){
@@ -2040,3 +2040,31 @@ const input = document.querySelector('input');
  //Retorno : TECLA PRESSIONADA: KeyH
           // javaScript.js:2031 SHIFT?true
 //aqui se eu clico e solto o shift retorna como false, mas se eu pressiono e seguro ele retorna como true, mas ao soltar ele retorna um outro evento como false.
+*/
+
+//EXERCICIO : LISTA DE TAREFAS SIMPPLES
+
+
+//crie uma lista, que ao digitar atraves do input o texto e clicar o
+// botao enviar, o texto envie para a lista :
+
+//Primeiro selecionando os elementos-
+const input = document.querySelector('input')
+const lista = document.querySelector ('ul')
+
+//criamos as funçoes dos elementos
+
+function  handleKeyup (event){
+   if (event.key === 'Enter') {
+    //Adcionar Elemento LI na lista
+    const newLi =document.createElement('li');
+    newLi.innerHTML = input.value;
+    lista.appendChild(newLi);
+
+    // Limpar o campo de texto
+    input.value = '';
+   }
+}
+ //Eventos
+input.addEventListener('keyup', handleKeyup);
+
