@@ -2042,7 +2042,7 @@ const input = document.querySelector('input');
 //aqui se eu clico e solto o shift retorna como false, mas se eu pressiono e seguro ele retorna como true, mas ao soltar ele retorna um outro evento como false.
 */
 
-//EXERCICIO : LISTA DE TAREFAS SIMPPLES
+/*EXERCICIO : LISTA DE TAREFAS SIMPPLES
 
 
 //crie uma lista, que ao digitar atraves do input o texto e clicar o
@@ -2067,4 +2067,15 @@ function  handleKeyup (event){
 }
  //Eventos
 input.addEventListener('keyup', handleKeyup);
+*/
+
+/*O QUE É OO ?  (Orientação à objetos) - OOP
+
+A Orientação a Objetos(OOP, sigla em inglês para Object - Oriented 
+  Programming) é um paradigma de programação que se baseia no conceito de
+"objetos".Ela é um dos principais paradigmas de programação utilizados
+ na criação de software atualmente.A ideia fundamental por trás da OOP
+ é organizar o código de uma maneira 
+que se assemelha à maneira como as coisas funcionam no mundo real. 
+*/
 
