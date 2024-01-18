@@ -2079,3 +2079,12 @@ A Orientação a Objetos(OOP, sigla em inglês para Object - Oriented
 que se assemelha à maneira como as coisas funcionam no mundo real. 
 */
 
+/*POO no JavaScript
+
+-Programação Orientada a Objetos (POO - OOP)
+-Programação funcional 
+- Programação Funcional (PF - FP) (Functional Programming Paradigm)
+
+-CLASSES
+-FUNÇÕES/ OBJETOS  */
+
