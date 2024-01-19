@@ -2089,17 +2089,47 @@ que se assemelha à maneira como as coisas funcionam no mundo real.
 -FUNÇÕES/ OBJETOS  */
 
 
-//Classes: Construtor e This
+/*CLASSSES: CONSTRUTOR E THIS
 
 //vamos criar primeiro um template (objeto)
 //uma classe de uma pessoa, depois vamos criar objetos.(joao,maria,ana,etc)
 //e todos eles vao seguir o template que vamos criar.
 //vamos trabalhar com propiedades (caracteristicas: nome etc) e   metodos
 
-class Person{       //criei uma class
-   constructor (name, age){  //e criei um construtor//Propiedades
+   class Person{            //criei uma class OBS: 1 LETRA SEMPRE MAIUCULA
+ constructor (name, age){  //e criei um construtor//Propiedades
        this.name = name;
        this.age = age;
    }
 }
 //está criado o template. Na Proxima aula criaremos a instancia o objeto.
+*/
+
+
+//CLASSES: INSTANCIA
+
+class Person{ 
+
+  age = 0; //criamos uma variavel que ela vai ser aplicada para 
+  //toda pessao q for criado caso n usemos o age no construtor 
+  
+  constructor (name, age){
+   this.name = name;
+// this.age = age;
+}
+}
+//instancias ::
+let p1 = new Person("João");
+let p2 = new Person("Maria");
+let p3 = new Person ("Pedro");
+
+p1.age = 20; // aqui informamos que o p1 tem 20 anos
+
+console.log(`P1 = ${p1.name} tem ${p1.age} anos`);
+console.log(`P2 = ${p2.name} tem ${p2.age} anos`);
+console.log(`P3 = ${p3.name} tem ${p3.age} anos`);
+
+// Retorno no console : 
+// P1 = João tem 20 anos
+// P2 = Maria tem 0 anos
+// P3 = Pedro tem 0 anos
