@@ -2105,6 +2105,7 @@ que se assemelha à maneira como as coisas funcionam no mundo real.
 //está criado o template. Na Proxima aula criaremos a instancia o objeto.
 */
 
+//--------------------------------
 
 /*CLASSES: INSTANCIA
 
@@ -2178,7 +2179,9 @@ console.log(`Vendi o ${c3.marca} do ano ${c3.age}`);
 */
 //CLASSES: ACTION
 
-//CLASSES: GETTER E SETTER
+//-----------------------
+
+/*CLASSES: GETTER E SETTER
 //novos conceitos (get e set) - o conceito do get é pegar e o set é colocar
 //1 vamos renomear nossa variavel age
 
@@ -2227,4 +2230,51 @@ p1.age = 'abd'; //apesar de eu ter colocado letras
 console.log(`${p1.fullName} tem ${p1.age} anos`); 
 //lembrando que aqui utilizamos o age sem a alteração q fizemos pq usamos o age que esta na "função" criada acima.
 //usamos também o fullName para o nome completo do usuario.
+*/
 
+//CLASSE: HERANÇA
+
+//É quando herdamos elementos de uma classe pai para classe filho.
+
+//criamos um template para uma pessoa, uma classe com nome e idade
+
+class Person {
+
+  age= 27;
+
+  constructor(name){
+    this.name =name;
+  }
+
+  sayHi () {    //podemos criar funçoes e também variaveis dentro de person pra ser usada
+  console.log(`${this.name} diz Olá`); //podendo ser herdado em Estudante..
+  }
+
+}
+
+class Student extends Person {  //usamos extends para herdar do Person.
+    
+   constructor (name,id){
+    super(name); // para herdar a funç do pai usamos o "super"
+    this.id=id;
+   }
+
+   //aqui nós SOBRESCREVEMOS o sayHi que ja existia no elemento PAI.
+   sayHi(){
+    console.log(`${this.name} Diz olá :)`);
+   }
+   //obs: posso simplesmente copiar o cod acima e colocar no elemento pai
+   // e criar uma nova funçao no elemento filho herdando o sayHi para ter um resultado do elemento pai. sendo assim seria por exemplo: 
+    
+/*    sayHello(){
+      super.sayHi;
+    }                   */
+
+}
+
+
+let aluno = new Student ("Natiely", 12345);
+
+aluno.sayHi(); // foi criada lá em Person.
+
+//console.log(`Aluno: ${aluno.name} Idade: ${aluno.age} Matricula: ${aluno.id}`);
