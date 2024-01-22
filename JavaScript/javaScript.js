@@ -2105,7 +2105,7 @@ que se assemelha à maneira como as coisas funcionam no mundo real.
 //está criado o template. Na Proxima aula criaremos a instancia o objeto.
 */
 
-//--------------------------------
+//-------------------------------------------------------
 
 /*CLASSES: INSTANCIA
 
@@ -2179,7 +2179,7 @@ console.log(`Vendi o ${c3.marca} do ano ${c3.age}`);
 */
 //CLASSES: ACTION
 
-//-----------------------
+//-------------------------------------------------------
 
 /*CLASSES: GETTER E SETTER
 //novos conceitos (get e set) - o conceito do get é pegar e o set é colocar
@@ -2232,7 +2232,9 @@ console.log(`${p1.fullName} tem ${p1.age} anos`);
 //usamos também o fullName para o nome completo do usuario.
 */
 
-//CLASSE: HERANÇA
+//-------------------------------------------------------
+
+/*CLASSE: HERANÇA
 
 //É quando herdamos elementos de uma classe pai para classe filho.
 
@@ -2266,9 +2268,9 @@ class Student extends Person {  //usamos extends para herdar do Person.
    //obs: posso simplesmente copiar o cod acima e colocar no elemento pai
    // e criar uma nova funçao no elemento filho herdando o sayHi para ter um resultado do elemento pai. sendo assim seria por exemplo: 
     
-/*    sayHello(){
+     sayHello(){
       super.sayHi;
-    }                   */
+    }                   
 
 }
 
@@ -2277,4 +2279,37 @@ let aluno = new Student ("Natiely", 12345);
 
 aluno.sayHi(); // foi criada lá em Person.
 
-//console.log(`Aluno: ${aluno.name} Idade: ${aluno.age} Matricula: ${aluno.id}`);
+//console.log(`Aluno: ${aluno.name} Idade: ${aluno.age} Matricula: ${aluno.id}`);  */
+
+//CLASSES: VARIÁVEL/MÉTODO ESTÁTICO
+
+//são métodos que pertencem à classe em vez de uma instância específica da classe
+//Eles são definidos usando a palavra-chave static
+// Também  são chamados diretamente na classe, sem a necessidade de criar objetos.
+
+class Person {
+
+  static hands = 2; //<--criamos uma variavel estatica, significa que ela esta associada a classe person mas nao associada ao obejto nem a instancia que a gente criar.
+  age = 0;
+
+
+constructor (name){
+  this.name = name;
+}
+
+sayHi(){
+  console.log(`Oi meu nome é ${p1.name} e tenho ${Person.hands} Mãos`);
+}
+
+//aqui é para acessar o elemento pai diretamente.
+/*
+static sayHi (){
+  console.log(`Oi ${this.name}`);
+  }  */
+}
+//obg: o uso do this esta somente associado ao uso do objeto criado.
+let p1 = new Person ("Natiely");
+
+p1.sayHi(); //associada apenas ao elemento Person. por este motivo nao usamos o this e sim o elemento Person
+
+//console.log(`${p1.name} tem ${Person.hands} Mãos`); posso acessar tanto dentro quanto por fora como neste exemplo.
