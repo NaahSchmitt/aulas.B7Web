@@ -2106,13 +2106,13 @@ que se assemelha à maneira como as coisas funcionam no mundo real.
 */
 
 
-//CLASSES: INSTANCIA
+/*CLASSES: INSTANCIA
 
 class Person{ 
 
   age = 0; //criamos uma variavel que ela vai ser aplicada para 
   //toda pessao q for criado caso n usemos o age no construtor 
-  
+
   constructor (name, age){
    this.name = name;
 // this.age = age;
@@ -2132,4 +2132,99 @@ console.log(`P3 = ${p3.name} tem ${p3.age} anos`);
 // Retorno no console : 
 // P1 = João tem 20 anos
 // P2 = Maria tem 0 anos
-// P3 = Pedro tem 0 anos
+// P3 = Pedro tem 0 anos 
+
+// praticando
+class Familia {
+  
+  constructor (nome, idade){
+    this.nome = nome ; 
+    this.idade = idade;
+  }
+}
+
+let Mae = new Familia("Rose", 49);
+let Irmao = new Familia ("Lipe", 28);
+let irma = new Familia ("Nay");
+let Marido = new Familia ("Denis");
+let Pai = new Familia("Manoel", 55);
+ 
+
+irma.idade = 26;
+Marido.idade = 27;
+
+console.log(`${irma.nome} tem ${irma.idade} anos`);
+console.log (`Meu Marido ${Marido.nome} tem ${Marido.idade} anos`);
+console.log(`Minha Mae ${Mae.nome} completou ${Mae.idade}`);
+
+
+//---
+
+class Carro{
+  constructor (marca, age){
+    this.marca = marca;
+    this.age = age;
+  }
+  
+}
+
+let c1 = new Carro ("Ferrari", 2015);
+let c2 = new Carro ("Jaguar", 2023);
+let c3 = new Carro ("Fusca", 1996);
+
+console.log(`Ganhei a ${c1.marca} em ${c1.age}`);
+console.log(`Tenho um ${c2.marca} de ${c2.age}`);
+console.log(`Vendi o ${c3.marca} do ano ${c3.age}`);
+*/
+//CLASSES: ACTION
+
+//CLASSES: GETTER E SETTER
+//novos conceitos (get e set) - o conceito do get é pegar e o set é colocar
+//1 vamos renomear nossa variavel age
+
+class Person {
+
+  _age= 10;   //age com alteração !! = valor que quero que retorne
+  steps = 0;
+
+  constructor(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  takeSteps(){
+    this.steps++;
+  }
+
+  //criamos uma função pra uso de nome completo :
+  get fullName (){
+    return `${this.firstName} ${this.lastName}`;
+  }
+   
+ // age sem alteração
+  get age (){  //criamos como se fosse uma função e ela vai fzr oq? ele retorna o valor q eu quero. por exemplo::
+    return this._age;
+  }
+
+  //Usando o set
+  // Abaixo criamos um  tipo de proteção com este codigo para que nao seja utilizado no age strings ou qualquer outra coisa além de number 
+  set age(x){
+    if(typeof x == 'number'){
+      this._age = x;
+    }
+  }
+}
+
+let p1 = new Person ("João", "Silva");
+let p2 = new Person ("Maria", "Magalhaes");
+let p3 = new Person ("Ana", "Castro");
+
+p1.age = 'abd'; //apesar de eu ter colocado letras
+//o retorno vai ser em numero que vc escolheu no _age = 10;
+//porque criamos aquela funçao acima com o setter onde fala que se nao for usado number
+//ele mantem o retorno com o valor 10 do _age
+
+console.log(`${p1.fullName} tem ${p1.age} anos`); 
+//lembrando que aqui utilizamos o age sem a alteração q fizemos pq usamos o age que esta na "função" criada acima.
+//usamos também o fullName para o nome completo do usuario.
+
