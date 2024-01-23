@@ -2281,7 +2281,7 @@ aluno.sayHi(); // foi criada lá em Person.
 
 //console.log(`Aluno: ${aluno.name} Idade: ${aluno.age} Matricula: ${aluno.id}`);  */
 
-//CLASSES: VARIÁVEL/MÉTODO ESTÁTICO
+/*CLASSES: VARIÁVEL/MÉTODO ESTÁTICO
 
 //são métodos que pertencem à classe em vez de uma instância específica da classe
 //Eles são definidos usando a palavra-chave static
@@ -2302,14 +2302,57 @@ sayHi(){
 }
 
 //aqui é para acessar o elemento pai diretamente.
-/*
-static sayHi (){
-  console.log(`Oi ${this.name}`);
-  }  */
-}
+            static sayHi (){
+              console.log(`Oi ${this.name}`);
+                               }  
+                            }
+
+
 //obg: o uso do this esta somente associado ao uso do objeto criado.
 let p1 = new Person ("Natiely");
 
 p1.sayHi(); //associada apenas ao elemento Person. por este motivo nao usamos o this e sim o elemento Person
 
 //console.log(`${p1.name} tem ${Person.hands} Mãos`); posso acessar tanto dentro quanto por fora como neste exemplo.
+*/
+
+/*CLASSES: FACTORY
+//factory é uma função que cria uma instancia e cria um obejto
+//daquilo o que vc quer criar.
+
+class Person{
+  age=0;
+
+  constructor(name) {
+    this.name = name;
+  }
+}
+ //Ex: se alguem pedir pra criar um factory pra classe 'pessoa'
+
+function createPerson(name){  //createPerson
+  let p = new Person(name);
+  p.age = age;
+  return p;
+}
+//acima criei uma função que vai me aux no processo de instancia
+let p1 = createPerson('Natiely', 27);
+
+console.log (`${p1.name} tem ${p1.age} anos.`);
+*/
+//EXEMPLO DE USO DE FACTORY
+
+function criarPessoa(nome, idade) {
+  return {
+    nome: nome,
+    idade: idade,
+    saudacao: function() {
+      console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+    }
+  };
+}
+
+const pessoa1 = criarPessoa("João", 30);
+const pessoa2 = criarPessoa("Maria", 25);
+
+pessoa1.saudacao(); // Saída: Olá, meu nome é João e tenho 30 anos.
+pessoa2.saudacao(); // Saída: Olá, meu nome é Maria e tenho 25 anos.
