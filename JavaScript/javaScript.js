@@ -46,11 +46,14 @@ console.log(typeof nome) //Typeof -Mostra o tipo de dado no console, exemplo: co
 
 /*  EXERCICIO DE VARIAVEIS
 
- 1. crie uma var para armazanar o nome
+ //1. crie uma var para armazenar o nome
 //do carro e ponha o valor Ferrari. E exiba-a.:
 
 let carro = "Ferrari";
 console.log (carro)
+
+let rose = "mae";
+console.log(rose);
 
 //2 Crie uma var para armazenar o preço
 //do bolo, que custa R$19,99.:
@@ -62,7 +65,8 @@ console.log(precodoBolo);
 //let "cidade" = São Paulo
 
 let cidade = "São Paulo";
-console.log (cidade);  */
+console.log (cidade);  
+*/
 
 /*LET, CONST, VAR
 //mudando uma variavel :
@@ -2339,7 +2343,7 @@ let p1 = createPerson('Natiely', 27);
 
 console.log (`${p1.name} tem ${p1.age} anos.`);
 */
-//EXEMPLO DE USO DE FACTORY
+/*EXEMPLO DE USO DE FACTORY
 
 function criarPessoa(nome, idade) {
   return {
@@ -2356,3 +2360,7 @@ const pessoa2 = criarPessoa("Maria", 25);
 
 pessoa1.saudacao(); // Saída: Olá, meu nome é João e tenho 30 anos.
 pessoa2.saudacao(); // Saída: Olá, meu nome é Maria e tenho 25 anos.
+*/
+
+//Introdução a Requisiçoes
+
