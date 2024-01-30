@@ -2362,5 +2362,32 @@ pessoa1.saudacao(); // Saída: Olá, meu nome é João e tenho 30 anos.
 pessoa2.saudacao(); // Saída: Olá, meu nome é Maria e tenho 25 anos.
 */
 
-//Introdução a Requisiçoes
+//Introdução a Requisiçoes MODULO -5
 
+//Conceitos importantes: 
+//O que é Síncrono e Assíncrono?
+//Sincrona :
+let nome = "Naah";
+let sobrenome = "Alves";
+
+let NomeCompleto = nome + sobrenome;
+
+//execução sincrona é quando é executado uma linha
+//espera termnar, executa a próxima, e assim sucessivamente.
+//o código síncrono é lido e executado da primeira até a última linha, em ordem.
+
+//O código assíncrono, por sua vez, não necessariamente respeitará a 
+//ordem das linhas do código, podendo ter funções 
+//sendo lidas e executadas simultaneamente
+
+
+
+//Como a Web funciona (Req e Resp)? -Aula02
+
+Request = Requisição
+-> Cabeçalhos / Headers
+-> Corpo / Body
+
+Response = Resposta
+-> Cabeçalhos / Headers
+-> Corpo / Body
