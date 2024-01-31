@@ -1,4 +1,4 @@
-
+/*
 // operaçoes em variavéis
 
 
@@ -118,7 +118,7 @@ if (ex1 === 20){
 } else {
     console.log('voce n tem 20 anos')
 }
-// o === é mais restritivo. */
+// o === é mais restritivo. 
 
 //ah mas 20 é 20
 //entao que tal adcionarmos mais 15 anos a nossa idade?
@@ -141,3 +141,5 @@ let la = 14;
 if (la >= 18 && la < 60){
         console.log("voce é adulto");
 } 
+
+*/

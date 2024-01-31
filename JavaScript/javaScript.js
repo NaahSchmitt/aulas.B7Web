@@ -2403,7 +2403,7 @@ padrao de resposta da maioria das API :
 JSON = Javascript object Notation
 */
 
-//O QUE É UM CALLBACK?
+/*O QUE É UM CALLBACK?
 
 //vamos criar uum evento de click no botao:
 
@@ -2421,3 +2421,36 @@ document.querySelector('#botao').addEventListener('click',() =>{
 
   documentquerySelector("#botao")
   .addEventListener('click', clickCallback);
+
+  
+  -Funçao para o evento clicar no botao
+  -requisição a url x
+  -ta aqui o callback para quando vc tiver a resposta:
+  -callbackMaroto
+  */
+
+
+
+  // FAZENDO UMA REQUISIÇÃO NA PRÁTICA
+
+  //https://jsonplaceholder.typicode.com/posts
+
+  //acima um link de uma api falsa para aprender a criar requisição
+
+
+  function clicou (){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response)=>{
+      return response.json();
+    })
+    .then((json) => {
+      console.log(json[0].title);
+    })
+  }
+  document.querySelector('#botao').addEventListener('click', clicou);
+
+
+//fecth é uma funçao do propio JS para fzer requisiçoes
+//existe varios parametros para requisitar, o primeiro é usar o link da url
+//
+//then significa = E então.
