@@ -2362,8 +2362,8 @@ pessoa1.saudacao(); // Saída: Olá, meu nome é João e tenho 30 anos.
 pessoa2.saudacao(); // Saída: Olá, meu nome é Maria e tenho 25 anos.
 */
 
-//Introdução a Requisiçoes MODULO -5
-
+/*Introdução a Requisiçoes MODULO -5
+//aula01
 //Conceitos importantes: 
 //O que é Síncrono e Assíncrono?
 //Sincrona :
@@ -2380,14 +2380,44 @@ let NomeCompleto = nome + sobrenome;
 //ordem das linhas do código, podendo ter funções 
 //sendo lidas e executadas simultaneamente
 
+*/
 
-
-//Como a Web funciona (Req e Resp)? -Aula02
+/*Como a Web funciona (Req e Resp)? -Aula02
 
 Request = Requisição
--> Cabeçalhos / Headers
--> Corpo / Body
+-> Cabeçalhos / Headers // informaçoes principais
+-> Corpo / Body //  
 
 Response = Resposta
--> Cabeçalhos / Headers
+-> Cabeçalhos / Headers //
 -> Corpo / Body
+*/
+
+/*COMO UMA API FUNCIONA? -aula 03
+
+API= application programming Interface
+nada mais é de que uma forma de se comunicar entre
+entre uma máquina e outra.
+
+padrao de resposta da maioria das API :
+JSON = Javascript object Notation
+*/
+
+//O QUE É UM CALLBACK?
+
+//vamos criar uum evento de click no botao:
+
+document.querySelector('#botao').addEventListener('click',() =>{
+  alert("Clicou no botaozinho");
+});
+//É uma funçao criada para ser executada no futuro. ou seja criamos uma função, entregamos, e a pessoa decide quando vai ser executada.
+//Por exemplo. só vai ser executada ao clicar no botao, ou so vai se executado quando enviar; etc,etc..
+
+//podemos fazer desta maneira tbm :
+
+  function clickCallback(){
+    alert ("clicou no botao");
+  };
+
+  documentquerySelector("#botao")
+  .addEventListener('click', clickCallback);
