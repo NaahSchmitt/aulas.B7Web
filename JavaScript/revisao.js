@@ -141,5 +141,110 @@ let la = 14;
 if (la >= 18 && la < 60){
         console.log("voce é adulto");
 } 
-
 */
+
+//Condicionsl (if else)-Revisao
+
+let idade =  35;
+
+if (idade < 18){
+    console.log('Voce é Menor de idaade');
+} else if (idade <=18 && idade < 60){
+    console.log('Voce é um Adulto');
+} else if (idade >= 60){
+    console.log('Voce é idoso');
+}
+
+const estudante = 25;
+
+if (estudante < 10){
+    console.log('Ensino Fundamental');
+}  else if (estudante >= 10 && estudante <= 18){
+    console.log('Ensino Médio');
+} else if (estudante >18 && estudante <=20){
+    console.log('Ensino Técnico');
+} else if (estudante >=20){
+    console.log('Graduação')
+}
+
+//retorno = graduaçao
+
+//DESMITIFIANDO O IF - boolean
+
+
+
+
+
+let age = 10;
+
+let adulto = age >=18 && age < 60; //adulto é um boolean
+
+if (adulto){
+    console.log("É Adulto");
+} else{
+    console.log("Não é Adulto")
+}
+
+
+
+//aqui tbm usamos um boolean
+let age1 = 14;
+
+console.log(age1 > 18);
+
+
+// exercicio de condicional
+
+let a = 10;
+let b = 5;
+console.log(a > b); //true
+
+let c = "10"
+let d = 10;
+console.log(c === d);  //false
+
+let e = 10;
+let f = 5;
+console.log(e != f); //true
+
+
+let preco = 40.3;
+
+if (preco <= 45){
+    console.log("Está Barato")
+} else {
+    console.log('Está caro');
+}
+
+
+//Condicional ternário
+
+let isMember = false;
+
+let shipping = isMember ? 2 : 10;
+
+console.log(isMember ? "Voce é membro" : "voce nao e membro");
+console.log (`Frete: ${shipping}`);
+
+
+let age2 = 9;
+
+let isAdult = age2 >= 18 ? true : false;
+// let is adult = age2 >= 18 ? 'sim' : 'nao';   -> outra forma de fazer
+
+console.log(isAdult);
+
+//SWITCH
+
+let profession ="fiscal";
+
+switch (profession){
+    case 'fiscal' :
+        console.log ('sua camisa será verde');
+        break;
+    case 'bombeiro':
+        console.log('sua camiseta sera azul');
+        break;
+        default:
+            console.log('sua camisa sera preta')
+}

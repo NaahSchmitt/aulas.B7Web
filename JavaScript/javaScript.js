@@ -2454,3 +2454,65 @@ document.querySelector('#botao').addEventListener('click',() =>{
 //existe varios parametros para requisitar, o primeiro é usar o link da url
 //
 //then significa = E então.
+
+/*Como ver as requisições acontecendo
+
+Podemos  usar ferramentas como o console do navegador, 
+ferramentas de desenvolvimento de API, Wireshark, logs
+ do servidor ou ferramentas de monitoramento de rede, 
+ dependendo do ontexto e do tipo de requisição que deseja 
+ monitorar. */
+
+ //Entendendo Promise-
+
+ //Gerenciando erros na promise
+
+ function clicou (){
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response)=>{//
+    return response.json();
+  })
+  .then((json) => {
+   alert (`Titulo do primeiro post: ${json[0].title}`);
+  })
+  .catch(() =>{ //
+    alert ("Deu Problema na Requisição");
+  })
+  .finally(()=>{//
+    alert ("opa, acabou tudo!");
+  })
+}
+document.querySelector('#botao').addEventListener('click', clicou);
+
+
+/*Then, Catch e finally :
+ Esses métodos são usados para lidar com o resultado de uma
+ Promise e executar código quando a Promise
+é resolvida (concluída) ou rejeitada (encontrou um erro).
+
+then: O método then é usado para manipular o resultado de uma 
+Promise quando ela é resolvida com sucesso. Ele recebe duas funções
+como argumentos: a primeira função é chamada quando a Promise é 
+resolvida com sucesso (ou seja, quando o valor é disponibilizado),
+e a segunda função é opcional e é chamada quando ocorre um erro
+(rejeição da Promise). O then retorna uma nova Promise,
+permitindo que você encadeie operações assíncronas. 
+   
+  catch: O método catch é usado para manipular erros que ocorrem 
+durante a resolução de uma Promise. Ele recebe uma função que é
+chamada quando a Promise é rejeitada. É frequentemente
+usado após um then para lidar com erros específicos da Promise.
+
+finally: O método finally é usado para executar código, 
+independentemente de a Promise ter sido resolvida com sucesso ou
+ rejeitada. Ele recebe uma função que será executada assim que a
+Promise estiver concluída, não importando qual seja o resultado.
+Isso é útil para realizar tarefas de limpeza ou garantir que 
+determinadas ações sejam executadas, independentemente
+do resultado da Promise.
+
+Em resumo, then é usado para lidar com o sucesso da Promise, catch para lidar com
+ erros e finally para executar código após a Promise ser concluída, independentemente 
+do resultado. Eles são frequentemente usados juntos para tratar diferentes aspectos de 
+operações assíncronas em JavaScript.
+*/
