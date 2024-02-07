@@ -732,10 +732,10 @@ let y = 10;
 let pct = calc (x, y);
 
 console.log(`${pct}% de ${x} é ${y}` );  */
- /* PRATICANDO
+/* PRATICANDO
 
 function calcularPorcentagemDevotos (totalVotos, votosCandidato){
-  return (votosCandidato / totalVotos)*100;
+ return (votosCandidato / totalVotos)*100;
 }
 let totalVotos = 1000;
 let votosCandidato = 350;
@@ -761,44 +761,44 @@ function calcularDesconto (precoOriginal, porcentagemDesconto){
 
 ///    2 EXERCICIO
 // Calcule o preço do imovel
- // - m2 = 3.000
+// - m2 = 3.000
 //  - Se tiver 1 quarto, o m2 é 1x
 //  - Se tiver 2 quartos, o m2 é 1.2x
 //  - Se tiver 3 quartos,  o m2 é 1.5 x
- // Uso da função
+// Uso da função
 
 
- /* Praticando exercicios-
- let metragem = 123;
-    let quartos = 3;
-    let preco = calcularImoveis (metragem, quartos);
-    console.log(`A casa custa R$ ${preco}`);  */
-
- /*
-    function calcularImovel (metragem, quartos){
-      let m2 = 3.000;
-      let preco = 0;
-
-      switch (quartos) {
-         case 1 :
-          default:
-         preco = metragem * m2;
-         break;
-
-         case 2:
-          preco = metragem * ( m2 * 1.2);
-          break;
-        case 3:
-          preco = metragem * (m2 * 1.5);
-          break;
-    }
-      return preco;
-  }
-
-   let metragem = 123;
+/* Praticando exercicios-
+let metragem = 123;
    let quartos = 3;
-   let preco = calcularImovel (metragem, quartos);
-   console.log (`A casa custa R$ ${preco}`);
+   let preco = calcularImoveis (metragem, quartos);
+   console.log(`A casa custa R$ ${preco}`);  */
+
+/*
+   function calcularImovel (metragem, quartos){
+     let m2 = 3.000;
+     let preco = 0;
+
+     switch (quartos) {
+        case 1 :
+         default:
+        preco = metragem * m2;
+        break;
+
+        case 2:
+         preco = metragem * ( m2 * 1.2);
+         break;
+       case 3:
+         preco = metragem * (m2 * 1.5);
+         break;
+   }
+     return preco;
+ }
+
+  let metragem = 123;
+  let quartos = 3;
+  let preco = calcularImovel (metragem, quartos);
+  console.log (`A casa custa R$ ${preco}`);
 
 
 */
@@ -853,15 +853,15 @@ const somar = (x, y) =>{
 
  console.log(sobrenome('Lacerda'));  */
 
- /*---------- VARIAVÉIS DENTRO DA FUNÇÃO 
+/*---------- VARIAVÉIS DENTRO DA FUNÇÃO 
 
 // criamos uma var de escopo global
 // essa variavel count pode ser usada dentro de qualquer funcao
 //ja q ela foi criada fora da função
 
- function add (){
-  count ++;
- }
+function add (){
+ count ++;
+}
 let count = 0; 
 add();
 add();
@@ -875,8 +875,8 @@ console.log(count);
 let count = 0;
 
 function add (){
-  let count =0;
-  count ++;
+ let count =0;
+ count ++;
 }
 
 add();
@@ -885,11 +885,11 @@ console.log (count);
 
 */
 //---- teste de aula
- /*
+/*
 let idade = 0;
 function nome (){
  
-  idade ++;
+ idade ++;
 }
 
 nome();
@@ -900,8 +900,8 @@ console.log(idade);
 let idade = 0;
 
 function exemplo() {
-  //let idade = 0;
-  idade ++;
+ //let idade = 0;
+ idade ++;
 }
 
 exemplo();
@@ -945,15 +945,15 @@ let numeros = [
   //posso organizar da forma q eu quiser. :)
 console.log (numeros [3][2]); //return lala */
 
-  /* ------- OPERAÇÕES BÁSICAS DO ARRAY
+/* ------- OPERAÇÕES BÁSICAS DO ARRAY
 
 let bolo = [
-  'Trigo',
-   'Ovos',
-    'Leite',
-     'Manteiga',
-     'Açucar'
-    ];
+'Trigo',
+ 'Ovos',
+  'Leite',
+   'Manteiga',
+   'Açucar'
+  ];
 
 console.log (`Total de ingredientes: ${bolo.length}`);  */
 
@@ -1034,223 +1034,223 @@ let bolo = [
     console.log( `Quantidade de Cadastro: ${cadastro.length}`) */
 
 
-    // exercicio do array 
+// exercicio do array 
 
-    /*
-     1- no array abaixo qual numero pega a ferrari?
+/*
+ 1- no array abaixo qual numero pega a ferrari?
 
-    let carros = ['BMW', 'Ferrari', 'Mercedes'];
+let carros = ['BMW', 'Ferrari', 'Mercedes'];
 
-    let x= 1;
-    console.log('1. ' + carros[x]);
+let x= 1;
+console.log('1. ' + carros[x]);
 
-    2-  Troque ferrari por audi
+2-  Troque ferrari por audi
 
-    console.log ('2. Lista com Audi:');
-    console.log(carros);
+console.log ('2. Lista com Audi:');
+console.log(carros);
 
-    3-Adcione o Volvo a lista
+3-Adcione o Volvo a lista
 
-    console.log('3. Lista com Volvo:');
-    console.log(carros);
+console.log('3. Lista com Volvo:');
+console.log(carros);
 
-    4- Exiba quantos itens tem no array
-      console.log('4. Itens no array:');  
-
-
+4- Exiba quantos itens tem no array
+  console.log('4. Itens no array:');  
 
 
-      let carros = ['BMW', 'Ferrari', 'Mercedes'];
 
-      
-      let x= 1;
-      carros [1]= ('Audi');
-      carros.push('Volvo');
 
-      
-      console.log('1. ' + carros[x]);
-      console.log ('2. Lista com Audi:');
-      console.log('4. Itens no array:');
-      console.log(carros)
-      console.log(`Quantos itens tem no Array ${carros.length}`);
-      */
+  let carros = ['BMW', 'Ferrari', 'Mercedes'];
+
+  
+  let x= 1;
+  carros [1]= ('Audi');
+  carros.push('Volvo');
+
+  
+  console.log('1. ' + carros[x]);
+  console.log ('2. Lista com Audi:');
+  console.log('4. Itens no array:');
+  console.log(carros)
+  console.log(`Quantos itens tem no Array ${carros.length}`);
+  */
 //---------------------------------------------------------------------------
-      /*O QUE SÃO OBJETOS?
+/*O QUE SÃO OBJETOS?
 
-      let identificacao ={
-        nome: 'Mary',
-        age: 30,
-        city: 'SP' ,
-        characteristics: {
-          heigth: 1.65,
-          hair: 'black',
-          eyes: 'greens',
-        }
-      }
+let identificacao ={
+  nome: 'Mary',
+  age: 30,
+  city: 'SP' ,
+  characteristics: {
+    heigth: 1.65,
+    hair: 'black',
+    eyes: 'greens',
+  }
+}
 
-      console.log(`${identificacao.nome} has ${identificacao.age}`);
-      console.log(identificacao.characteristics.hair);
-      console.log(`${identificacao.nome} has eyes ${identificacao.characteristics.eyes}`);
-      console.log(`A altura de ${identificacao.nome} é ${identificacao.characteristics.heigth}`);
+console.log(`${identificacao.nome} has ${identificacao.age}`);
+console.log(identificacao.characteristics.hair);
+console.log(`${identificacao.nome} has eyes ${identificacao.characteristics.eyes}`);
+console.log(`A altura de ${identificacao.nome} é ${identificacao.characteristics.heigth}`);
 
 
-      const menu ={
-        massa: 'Macarrao',
-        fibra: 'arroz',
-        carne: ['Salmao', 'Frango','Churrasco'],
-        bebida: {
-          comalcool: 'caipirinha',
-          semalcool: 'Suco Natural',
-        }
-      }
+const menu ={
+  massa: 'Macarrao',
+  fibra: 'arroz',
+  carne: ['Salmao', 'Frango','Churrasco'],
+  bebida: {
+    comalcool: 'caipirinha',
+    semalcool: 'Suco Natural',
+  }
+}
 
-      console.log (`O prato de hoje é ${menu.massa} com ${menu.carne[2]} acompanhado de 
-       ${menu.bebida.semalcool}`);
+console.log (`O prato de hoje é ${menu.massa} com ${menu.carne[2]} acompanhado de 
+ ${menu.bebida.semalcool}`);
 
-       //aqui usamos array dentro do objeto, e puxamos no console com efeito 
-       //cascata também 
+ //aqui usamos array dentro do objeto, e puxamos no console com efeito 
+ //cascata também 
 
-       const familia = {
-        nome:'Manoel',
-        mae:'Rose',
-        irma:'Nay',
-        irmao:'lipe',
-        Conjugue: 'Denis',
-        Pet: ['Harry','Oliver', 'Dylan'],
-        endereço:{
-          PaisDenis: 'Guaianases',
-          Meuspais: 'Itaquera',
-          Moradia: 'analia franco'
-        }
-       }
+ const familia = {
+  nome:'Manoel',
+  mae:'Rose',
+  irma:'Nay',
+  irmao:'lipe',
+  Conjugue: 'Denis',
+  Pet: ['Harry','Oliver', 'Dylan'],
+  endereço:{
+    PaisDenis: 'Guaianases',
+    Meuspais: 'Itaquera',
+    Moradia: 'analia franco'
+  }
+ }
 
-       console.log(`Na minha familia o nome da minha mãe é ${familia.mae}
-       e do meu irmao mais velho é ${familia.irmao} ,o nome da minha irma mais nova 
-       é ${familia.irma}`);
+ console.log(`Na minha familia o nome da minha mãe é ${familia.mae}
+ e do meu irmao mais velho é ${familia.irmao} ,o nome da minha irma mais nova 
+ é ${familia.irma}`);
 
-       console.log(`Meu namorado se chama ${familia.Conjugue}, ele tem um cachorro chamado 
-       ${familia.Pet[1]} mas ele mora em ${familia.endereço.PaisDenis}`);
+ console.log(`Meu namorado se chama ${familia.Conjugue}, ele tem um cachorro chamado 
+ ${familia.Pet[1]} mas ele mora em ${familia.endereço.PaisDenis}`);
 
-       console.log(`Eu tenho um pet chamado ${familia.Pet[0]} e também ja tive uma calopsita chamado ${familia.Pet[2]}`);
+ console.log(`Eu tenho um pet chamado ${familia.Pet[0]} e também ja tive uma calopsita chamado ${familia.Pet[2]}`);
 
-       console.log(`Meu namorado e eu moramos em ${familia.endereço.Moradia}`);
+ console.log(`Meu namorado e eu moramos em ${familia.endereço.Moradia}`);
 
-       console.log(`Minha mae com meus irmaos moram em ${familia.endereço.Meuspais}`);
+ console.log(`Minha mae com meus irmaos moram em ${familia.endereço.Meuspais}`);
 
 */
-       /*ACESSANDO E ALTERANDO OBJETOS
+/*ACESSANDO E ALTERANDO OBJETOS
 
-       let personagem = {
-        nome: 'Manoel',
-        idade:90,
-        olhos: ['preto','azul'],
-        caracteristicas: {
-         forca: 20,
-         magia: 5,
-         stamina: 15
-        }
-       }
+let personagem = {
+ nome: 'Manoel',
+ idade:90,
+ olhos: ['preto','azul'],
+ caracteristicas: {
+  forca: 20,
+  magia: 5,
+  stamina: 15
+ }
+}
 
-        ex: conforme codigos anteriores
+ ex: conforme codigos anteriores
 
-        personagem.nome = 'Pedro';
-        console.log(personagem.nome)
+ personagem.nome = 'Pedro';
+ console.log(personagem.nome)
 
-      (aqui estou acessando e alterando o nome, note q no código anterior
-        o "nome: 'Manoel' era manoel e agr vc alterou para 'Pedro' ")
-       
-       personagem.caracteristicas.forca += 5;
-       console.log(`Forca: ${personagem.caracteristicas.forca}`);
+(aqui estou acessando e alterando o nome, note q no código anterior
+ o "nome: 'Manoel' era manoel e agr vc alterou para 'Pedro' ")
+ 
+personagem.caracteristicas.forca += 5;
+console.log(`Forca: ${personagem.caracteristicas.forca}`);
 
-       Aqui note que no nosso objeto a forca do personagem é 20
-       mas nós aumentamos com 5 de forca totalizando 25 neste exemplo.
-       
-       personagem.olhos.push('verde');
-       console.log(personagem.olhos);
+Aqui note que no nosso objeto a forca do personagem é 20
+mas nós aumentamos com 5 de forca totalizando 25 neste exemplo.
+ 
+personagem.olhos.push('verde');
+console.log(personagem.olhos);
 
-       o retorno será : preto, azul, verde (que foi o que vc adcionou.)
-       neste caso usamos o push para adcionar pq se trata de um array usado no obejto
+o retorno será : preto, azul, verde (que foi o que vc adcionou.)
+neste caso usamos o push para adcionar pq se trata de um array usado no obejto
 
-       */
-
-
-       /* let personagem ={
-        nome:'Natiely',
-        idade: 90,
-        carros: [
-          {modelo: 'fiat', cor: 'preto'},
-          {modelo: 'Ferrari', cor: 'vermelho'},
-          {modelo: 'Captiva', cor: 'branco'}
-        ]
-       }
-       personagem.carros[1].modelo= 'Fusca';
-
-       console.log(personagem.carros[1].modelo);
-       console.log(personagem.carros[0].cor);
-       console.log(personagem.carros[2].modelo); 
-  
-        Nesta Situação, criamos um objeto, nele note-se que 
-       criamos um array, e dentro do array criamos um objeto para 
-       criar modelos de carros diferentes. No console acima mostra
-       a forma correta de acessar.
-       usamos tambem alteracao do modelo ferrari neste exemplo para fusca.
-                    HORA DE PRATICAR O QUE VOCE APARENDEU:   */
+*/
 
 
+/* let personagem ={
+ nome:'Natiely',
+ idade: 90,
+ carros: [
+   {modelo: 'fiat', cor: 'preto'},
+   {modelo: 'Ferrari', cor: 'vermelho'},
+   {modelo: 'Captiva', cor: 'branco'}
+ ]
+}
+personagem.carros[1].modelo= 'Fusca';
 
-                  /*  FUNCTION DENTRO DE UM OBJETO
+console.log(personagem.carros[1].modelo);
+console.log(personagem.carros[0].cor);
+console.log(personagem.carros[2].modelo); 
+ 
+ Nesta Situação, criamos um objeto, nele note-se que 
+criamos um array, e dentro do array criamos um objeto para 
+criar modelos de carros diferentes. No console acima mostra
+a forma correta de acessar.
+usamos tambem alteracao do modelo ferrari neste exemplo para fusca.
+             HORA DE PRATICAR O QUE VOCE APARENDEU:   */
 
-                    let personagem = {
-                      nome: 'Harry',
-                      sobrenome:'Biesarck',
-                      idade:90,
-                      olhos: ['preto','azul'],
-                      caracteristicas: function (){
-                        return `${this.nome} ${this.sobrenome}`; 
-                      }
-                    }
-                  
-                    console.log(personagem.caracteristicas ());  */
 
-                            /*Praticando função dentro do objeto
-                    let cadastro ={
-                      rg: 123456,
-                      cpf: 654321,
-                      nome: 'lacerda',
-                      informacoes: function () {
-                        return `${this.rg} ${this.cpf}`;
-                      }
-                    }
-                     console.log(cadastro.informacoes());
-                         
 
-                     let anime ={
-                      shoujo: 'Toradora',
-                      terror: 'Another',
-                      acao: 'atack on titan',
-                      liveaction: function (){
-                        return `Anime de Terror bom é ${this.terror} e de acao é ${this.acao}`
-                      }
-                     }
+/*  FUNCTION DENTRO DE UM OBJETO
 
-                     console.log(anime.liveaction());
+  let personagem = {
+    nome: 'Harry',
+    sobrenome:'Biesarck',
+    idade:90,
+    olhos: ['preto','azul'],
+    caracteristicas: function (){
+      return `${this.nome} ${this.sobrenome}`; 
+    }
+  }
+ 
+  console.log(personagem.caracteristicas ());  */
 
-                     //obs: neste exemplo  podemos usar arrow function
-                     // que é ()=> { }   porem nao podemos ter acesso ao this
-                     //nao vamos ter acesso ao propio objeto vai ser undefined
-                     //para ter acesso ao this crie uma function normal
+/*Praticando função dentro do objeto
+let cadastro ={
+rg: 123456,
+cpf: 654321,
+nome: 'lacerda',
+informacoes: function () {
+return `${this.rg} ${this.cpf}`;
+}
+}
+console.log(cadastro.informacoes());
+ 
 
-                     // Function normal
+let anime ={
+shoujo: 'Toradora',
+terror: 'Another',
+acao: 'atack on titan',
+liveaction: function (){
+return `Anime de Terror bom é ${this.terror} e de acao é ${this.acao}`
+}
+}
 
-                         function exemplo (){
-                        return `${ }`
-                     }
-                     
+console.log(anime.liveaction());
 
-                     // Arrow Function() => { } ex:
+//obs: neste exemplo  podemos usar arrow function
+// que é ()=> { }   porem nao podemos ter acesso ao this
+//nao vamos ter acesso ao propio objeto vai ser undefined
+//para ter acesso ao this crie uma function normal
+
+// Function normal
+
+function exemplo (){
+return `${ }`
+}
+ 
+
+// Arrow Function() => { } ex:
 
 const somar = (x, y) => {
-  return x + y;
+return x + y;
 }
 console.log(somar(10, 5)); */
 
@@ -1404,10 +1404,10 @@ let fruits = ['maça','Uva', 'Banana'];
 
 */
 
- /*FUNÇOES DE ARRAY
+/*FUNÇOES DE ARRAY
  
 
- let fruits =['maça','banana','uva', 'manga'];
+let fruits =['maça','banana','uva', 'manga'];
 
 fruits.push('Laranja'); //adciona item
 fruits.pop();  //remover ultimo array
@@ -1419,147 +1419,147 @@ console.log(fruits.join('----'));// (comando join) junta os itens do array ou ad
 
 
 console.log(fruits);
- console.log(fruits.length); //retorna em numero seus itens do array  */
+console.log(fruits.length); //retorna em numero seus itens do array  */
 
- /*-----------ORDENAÇÃO DE ARRAY (do menor para o maior)
+/*-----------ORDENAÇÃO DE ARRAY (do menor para o maior)
 
 
- let fruits =['maça','banana','uva', 'manga'];
+let fruits =['maça','banana','uva', 'manga'];
 
- fruits.sort(); // deixa os itens em ordem alfabetica
+fruits.sort(); // deixa os itens em ordem alfabetica
 fruits.reverse(); // aqui reverte seus itens do ultimo para os primeiros e os primeiros para os ultimos (ñ organizado em ordem alfabetica)
 
 //mas se usado os dois juntos o  fruits.sort(); e 
-   //                            fruits.reverse(); 
-   //o retorno vai ser dos itens em ordem alfabetica sendo do Z ao A. (sendo organizado)
+  //                            fruits.reverse(); 
+  //o retorno vai ser dos itens em ordem alfabetica sendo do Z ao A. (sendo organizado)
 
- console.log(fruits) 
+console.log(fruits) 
 
 
- let cars =[
-  {brand: 'Fiat', year:2022},
-  {brand:'Bmw', year: 2018},
-  {brand: 'Ferrari', year: 2020}
- ]
+let cars =[
+ {brand: 'Fiat', year:2022},
+ {brand:'Bmw', year: 2018},
+ {brand: 'Ferrari', year: 2020}
+]
 
- cars.sort((a, b) => {
-  if (a.year > b.year) {
-    return 1;
-  } else if (a.year < b.year) {
-    return -1;
-  } else{
-    return 0;
-  }
- });   
- // ------------------
- //Neste caso usamos o if else, de modo explicativo::
- //se a.year (2002) for maior que b.year (2018) o return vai ser 1 caso contrario sera -1 e assim
- //sussesivamente, independe do ano. ele vai fazer o retorno automaticamente 
- //trazendo os numeros menos pra frente.
- //sendo assim o retorno do console fica: 2018, 2020,2022  ---------------
+cars.sort((a, b) => {
+ if (a.year > b.year) {
+   return 1;
+ } else if (a.year < b.year) {
+   return -1;
+ } else{
+   return 0;
+ }
+});   
+// ------------------
+//Neste caso usamos o if else, de modo explicativo::
+//se a.year (2002) for maior que b.year (2018) o return vai ser 1 caso contrario sera -1 e assim
+//sussesivamente, independe do ano. ele vai fazer o retorno automaticamente 
+//trazendo os numeros menos pra frente.
+//sendo assim o retorno do console fica: 2018, 2020,2022  ---------------
  
  
 
-     //UMA FORMA MAIS SIMPLIFICADO
- cars.sort((a, b) =>{
-  return a.year - b.year;
- }); 
+    //UMA FORMA MAIS SIMPLIFICADO
+cars.sort((a, b) =>{
+ return a.year - b.year;
+}); 
  
- // neste exemplo fizemos uma conta de: 2022 - 2018 =4 .Quanto maior o resultado mais vai ficando abaixo, sendo assim 2018 vem primeiro na lista ordenada
+// neste exemplo fizemos uma conta de: 2022 - 2018 =4 .Quanto maior o resultado mais vai ficando abaixo, sendo assim 2018 vem primeiro na lista ordenada
 
- //SEGUNDA FORMA SIMPLICADA 
+//SEGUNDA FORMA SIMPLICADA 
  
- cars.sort((a, b) => a.year - b.year); 
+cars.sort((a, b) => a.year - b.year); 
 
- console.log(cars); 
+console.log(cars); 
 
- //uma opção de fazer revertido do maior para o menor é:
- cars.sort((a, b) => b.year - a.year);  
+//uma opção de fazer revertido do maior para o menor é:
+cars.sort((a, b) => b.year - a.year);  
 
- console.log(cars);
+console.log(cars);
 
- ////neste exemplo apenas invertemos  a e b. retornando assim:
- //2022, 2020, 2018.
+////neste exemplo apenas invertemos  a e b. retornando assim:
+//2022, 2020, 2018.
 */
 
 
- /*---------------ITERAÇÃO DE ARRAY 1
+/*---------------ITERAÇÃO DE ARRAY 1
 
- let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
+let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
  
 
 
- let bigFruits = fruits.filter((value)=> value.length > 4); //como so temos uma linha de codigo podemos fazer assim.
-   //------------------^^^^^^ filterrr
- // (forma simplificada ja q retorna true or false): 
-   // return item.length > 4;
-  //Mas geralmente a forma completa é:
+let bigFruits = fruits.filter((value)=> value.length > 4); //como so temos uma linha de codigo podemos fazer assim.
+  //------------------^^^^^^ filterrr
+// (forma simplificada ja q retorna true or false): 
+  // return item.length > 4;
+ //Mas geralmente a forma completa é:
 
-  if(item.length > 4){
-      return true;
+ if(item.length > 4){
+     return true;
+   } else {
+     return false;
+   }
+ 
+ 
+console.log(bigFruits);
+//retorno do console -> banana, abacaxi laranja, pq sao maiores que 4 letras.
+//a funçaofilter ela gera um novo array, entao precisamos salvar em algum lugar por issom criamos o let bifruits = fruits.filter....
+
+
+//PROXIMA FUNÇÃO QUE RETORNA POSITIVO OR FALSO
+
+let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
+
+let ok= fruits.every((value)=>{   // <-----------every
+    return value.length > 3;   //forma simplificada
+ 
+ 
+    //podemos usar esta forma ou a forma simplificada acima
+    if(value.length > 3){
+     return true;
     } else {
-      return false;
-    }
+     return false;
+    } 
+});
+
+if (ok) {
+ console.log ('Todos São maiores que 3');
+} else {
+ console.log('Não são Todos maiores que 3');
+}
  
- 
- console.log(bigFruits);
- //retorno do console -> banana, abacaxi laranja, pq sao maiores que 4 letras.
- //a funçaofilter ela gera um novo array, entao precisamos salvar em algum lugar por issom criamos o let bifruits = fruits.filter....
+//Neste caso TODOS OS ITENS que sforem maior que 3 serao filtrados.
 
+// ha eu quero que pegue se alguns forem maior que tres. meste caso usamos some  nolugar do every,ex
 
- //PROXIMA FUNÇÃO QUE RETORNA POSITIVO OR FALSO
+let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
 
- let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
-
- let ok= fruits.every((value)=>{   // <-----------every
-     return value.length > 3;   //forma simplificada
-  
-  
-     //podemos usar esta forma ou a forma simplificada acima
-     if(value.length > 3){
-      return true;
-     } else {
-      return false;
-     } 
+let ok = fruits.some((value) =>{
+    return value.length > 3;   //<------- some
  });
 
- if (ok) {
-  console.log ('Todos São maiores que 3');
- } else {
-  console.log('Não são Todos maiores que 3');
- }
-  
- //Neste caso TODOS OS ITENS que sforem maior que 3 serao filtrados.
+   if (ok) {
+    console.log ('Algum item é maior que 3');
+   } else {
+    console.log('Nenhum Item é  maior que 3');
+   }
 
- // ha eu quero que pegue se alguns forem maior que tres. meste caso usamos some  nolugar do every,ex
+   //Nesta aula vimos o filter, every e some
+   //a diferença do some para o every é que o some
+   // quando um ja é o suficiente ele ja fica satisfeto diferente do every
+   // que precisa que todos sejam satisfatorios
 
- let fruits =['Maça','Banana',"Abacaxi", "Laranja","Uva"];
+   //vamos aprender mais um::
+   //ex: como saber se eu tenho uma determinada fruta? exemplo ::
 
- let ok = fruits.some((value) =>{
-     return value.length > 3;   //<------- some
-  });
+   let fruits =['Maça','Banana','Abacaxi', 'Laranja','Uva'];
 
-    if (ok) {
-     console.log ('Algum item é maior que 3');
-    } else {
-     console.log('Nenhum Item é  maior que 3');
-    }
-
-    //Nesta aula vimos o filter, every e some
-    //a diferença do some para o every é que o some
-    // quando um ja é o suficiente ele ja fica satisfeto diferente do every
-    // que precisa que todos sejam satisfatorios
-
-    //vamos aprender mais um::
-    //ex: como saber se eu tenho uma determinada fruta? exemplo ::
-
-    let fruits =['Maça','Banana','Abacaxi', 'Laranja','Uva'];
-
-    if (fruits.includes ('Uva')) {
-      console.log('tem uva sim');
-    } else {
-      console.log('Não tem uva...');
-    }
+   if (fruits.includes ('Uva')) {
+     console.log('tem uva sim');
+   } else {
+     console.log('Não tem uva...');
+   }
 //retorno do console: tem uva sim
 
 
@@ -2431,23 +2431,23 @@ document.querySelector('#botao').addEventListener('click',() =>{
 
 
 
-  // FAZENDO UMA REQUISIÇÃO NA PRÁTICA
+// FAZENDO UMA REQUISIÇÃO NA PRÁTICA
 
-  //https://jsonplaceholder.typicode.com/posts   //API de Teste
+//https://jsonplaceholder.typicode.com/posts   //API de Teste
 
-  //acima um link de uma api falsa para aprender a criar requisição
+//acima um link de uma api falsa para aprender a criar requisição
 
 
-  function clicou (){
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((response)=>{
+function clicou() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => {
       return response.json();
     })
     .then((json) => {
       console.log(json[0].title);
     })
-  }
-  document.querySelector('#botao').addEventListener('click', clicou);
+}
+document.querySelector('#botao').addEventListener('click', clicou);
 
 
 //fecth é uma funçao do propio JS para fzer requisiçoes
@@ -2463,7 +2463,7 @@ ferramentas de desenvolvimento de API, Wireshark, logs
  dependendo do ontexto e do tipo de requisição que deseja 
  monitorar. */
 
- //Entendendo Promise-
+//Entendendo Promise-
 
 /*Gerenciando erros na promise
 
@@ -2518,8 +2518,8 @@ operações assíncronas em JavaScript.
 */
 
 
-//TIPOS DE ESTATUS DE UMA REQUISIÇÃO
-/*
+/*TIPOS DE ESTATUS DE UMA REQUISIÇÃO
+
 
 Nesta aula entraremos no site a seguir:
  https://developer.mozilla.org/pt-BR/docs/web/HTTP/status
@@ -2535,7 +2535,7 @@ os Principais são:
 404 - Url nao existe
 405 - metodo q esta tentando não existe(nao e permitido para esta url)
 500 - Erro do Servidor
-*/
+
 function clicou (){
   fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response)=>{
@@ -2553,3 +2553,55 @@ function clicou (){
   })
 }
 document.querySelector('#botao').addEventListener('click', clicou);
+*/
+
+//Métodos de envio de requisição
+
+function clicou() {
+  // GET- pegar informaçoes
+  //POST- Postar, enviando informaçoes
+  //PUT- Alterar informação já existente
+  //DELETE
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => {
+      console.log(`status: ${response.status}`); //aqui iremos ver o status desta requisição. com retorno de 200;
+      return response.json();
+    })
+    .then((json) => {
+      alert(`Titulo do primeiro post: ${json[0].title}`);
+    })
+    .catch(() => {
+      alert("Deu Problema na Requisição");
+    })
+    .finally(() => {
+      alert("opa, acabou tudo!");
+    })
+}
+
+//vamos criar um metodo post
+function inserir() {
+  fetch(
+    'https://jsonplaceholder.typicode.com/posts',
+    {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json'
+    },
+      body: JSON.stringify({
+        title: 'Titulo de Teste',
+        body: 'Corpo de Teste',
+        userId: 2
+      })
+    }
+  )
+  .then ((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    console.log(json);
+  });
+}
+
+
+document.querySelector('#botao').addEventListener('click', clicou);
+document.querySelector('#inserir').addEventListener('click', inserir);
