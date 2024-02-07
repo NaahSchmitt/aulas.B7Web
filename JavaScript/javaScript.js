@@ -2433,7 +2433,7 @@ document.querySelector('#botao').addEventListener('click',() =>{
 
   // FAZENDO UMA REQUISIÇÃO NA PRÁTICA
 
-  //https://jsonplaceholder.typicode.com/posts
+  //https://jsonplaceholder.typicode.com/posts   //API de Teste
 
   //acima um link de uma api falsa para aprender a criar requisição
 
@@ -2465,7 +2465,7 @@ ferramentas de desenvolvimento de API, Wireshark, logs
 
  //Entendendo Promise-
 
- //Gerenciando erros na promise
+/*Gerenciando erros na promise
 
  function clicou (){
   fetch('https://jsonplaceholder.typicode.com/posts')
@@ -2485,7 +2485,7 @@ ferramentas de desenvolvimento de API, Wireshark, logs
 document.querySelector('#botao').addEventListener('click', clicou);
 
 
-/*Then, Catch e finally :
+Then, Catch e finally :
  Esses métodos são usados para lidar com o resultado de uma
  Promise e executar código quando a Promise
 é resolvida (concluída) ou rejeitada (encontrou um erro).
@@ -2516,3 +2516,40 @@ Em resumo, then é usado para lidar com o sucesso da Promise, catch para lidar c
 do resultado. Eles são frequentemente usados juntos para tratar diferentes aspectos de 
 operações assíncronas em JavaScript.
 */
+
+
+//TIPOS DE ESTATUS DE UMA REQUISIÇÃO
+/*
+
+Nesta aula entraremos no site a seguir:
+ https://developer.mozilla.org/pt-BR/docs/web/HTTP/status
+onde apresenta os principais status de uma requisição 
+os Principais são:
+200 - Sucesso 
+201 - Foi criado o que queria.
+206 - resposta quebrada
+301 - url acessada mudou é outra url
+400 - erro de cliente - Requisição de forma errada
+401 - tentando acessar algo que nao tem acesso
+403 - Proibida (geral)
+404 - Url nao existe
+405 - metodo q esta tentando não existe(nao e permitido para esta url)
+500 - Erro do Servidor
+*/
+function clicou (){
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response)=>{
+    console.log(`status: ${response.status}`); //aqui iremos ver o status desta requisição. com retorno de 200;
+    return response.json();
+  })
+  .then((json) => {
+   alert (`Titulo do primeiro post: ${json[0].title}`);
+  })
+  .catch(() =>{ //
+    alert ("Deu Problema na Requisição");
+  })
+  .finally(()=>{//
+    alert ("opa, acabou tudo!");
+  })
+}
+document.querySelector('#botao').addEventListener('click', clicou);
