@@ -2431,7 +2431,7 @@ document.querySelector('#botao').addEventListener('click',() =>{
 
 
 
-// FAZENDO UMA REQUISIÇÃO NA PRÁTICA
+/* FAZENDO UMA REQUISIÇÃO NA PRÁTICA
 
 //https://jsonplaceholder.typicode.com/posts   //API de Teste
 
@@ -2454,7 +2454,7 @@ document.querySelector('#botao').addEventListener('click', clicou);
 //existe varios parametros para requisitar, o primeiro é usar o link da url
 //
 //then significa = E então.
-
+*/
 /*Como ver as requisições acontecendo
 
 Podemos  usar ferramentas como o console do navegador, 
@@ -2555,7 +2555,7 @@ function clicou (){
 document.querySelector('#botao').addEventListener('click', clicou);
 */
 
-//Métodos de envio de requisição
+/*Métodos de envio de requisição
 
 function clicou() {
   // GET- pegar informaçoes
@@ -2601,7 +2601,37 @@ function inserir() {
     console.log(json);
   });
 }
+document.querySelector('#botao').addEventListener('click', clicou);
+document.querySelector('#inserir').addEventListener('click', inserir);
+*/
+//Promises com async/await
+//criando um código mais limpo usando o async e await
 
+async function clicou() {
+ let response = await fetch('https://jsonplaceholder.typicode.com/posts');
+ let json = await response.json();
+ alert(`Titulo do primeiro post: ${json[0].title}`);
+ alert("CLICOU");
+}
+
+async function inserir() {
+  let response = await fetch(
+    'https://jsonplaceholder.typicode.com/posts',
+    {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: 'Titulo de Teste',
+        body: 'Corpo de Teste',
+        userId: 2
+      })
+    });
+  let json = await response.json();
+  
+  console.log(json);
+}
 
 document.querySelector('#botao').addEventListener('click', clicou);
 document.querySelector('#inserir').addEventListener('click', inserir);

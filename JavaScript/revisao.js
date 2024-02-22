@@ -22,7 +22,7 @@ let regiao = "Sao paulo"
 
 console.log (`My name is ${docmt} my document is 
 ${rg} I'm from ${regiao}`);
-//usando string para separar as palavras
+//usando template string para separar as palavras
 
 
 let n1 = 350;
@@ -236,7 +236,7 @@ console.log(isAdult);
 
 //SWITCH
 
-let profession ="fiscal";
+let profession ="programador";
 
 switch (profession){
     case 'fiscal' :
@@ -245,6 +245,90 @@ switch (profession){
     case 'bombeiro':
         console.log('sua camiseta sera azul');
         break;
+    case 'Professor':
+        console.log('Sua camiseta será laranja');
+        break;
+    case 'Programador':
+        console.log('Sua camiseta é branca');
+        break;        
         default:
-            console.log('sua camisa sera preta')
+            console.log('sua camisa sera preta');
 }
+
+
+let dados = 'Rg';
+
+switch (dados){
+    case 'nome':
+        console.log('Natiely');
+        break;
+    case 'nickname' :
+        console.log('Alves');
+        break;
+    case 'idade' :
+        console.log('27');
+        break;
+    case 'Rg':
+        console.log('Rg-Documento');
+        break;
+    default:
+        console.log('Falta documento');   
+}
+
+
+/*
+
+let preco1 = 30;
+
+let preconovo = preco1 += 21;
+
+console.log (preconovo);
+
+
+let produto = 25;
+
+let novoproduto = produto += 78;
+
+console.log(novoproduto);
+
+//como aplicar porcentagem ex: produto ficou ficou 80% pq tirou 20% para dar de desconto ao cliente =>
+
+let shampoo = 100;
+
+shampoo = shampoo * 0.8;
+
+console.log ("preço novo do shampoo com 20% de desconto é", shampoo, "reais");
+//retorno com 80 reais
+
+let number = 30;
+let string = "lalala"
+
+console.log(typeof number);
+console.log( typeof string);
+//mostra o tipo de variavel de usado typeof 
+
+let numero = 5464;
+
+console.log("É Maior?", numero > 5464);
+
+let leite = 6.99;
+let ovos =12.80;
+let  macarrao = 7.80;
+
+if (leite  <= 7){
+    console.log("comprei o leite");
+}
+if (ovos >= 10){
+    console.log("tem algo errado com os ovos");
+} else{
+    console.log("comprei os ovos");
+}
+if (macarrao <= 6){
+    console.log("Comprei o macarrao");
+} else {
+    console.log("Macarrao está caro demais")
+}
+*/
+
+//introduzindo funçoes
+
