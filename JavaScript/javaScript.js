@@ -2768,7 +2768,7 @@ console.log(bolo);
 //note q no console quando number o numero fica azul.
 //quando string ele fica preto(sem cor alguma, como string);
 
-
+/*
 let one = 10;
 
 let res = one.toString();
@@ -2782,7 +2782,7 @@ let a = 14.5484562;
 let b = 'R$ ' + a.toFixed(2);
 console.log(b);
 //return R$ 14.54
-
+*/
 //3-- Tranformar uma string em number
 
 let n = '25';
@@ -2802,4 +2802,51 @@ console.log(y);
 
 
 //MÉTODOS DE ARRAY (1/4)
+
+//.toString tranforma um array em string
+//.join('-')  separa pelo item divisor q eu colocar no join
+//.indexOf('Corante')      procura a posição de onde esta o corante, caso o item n existe ele retorna -1.
+//.pop();     remove o último item do array
+//.shift();   remove o primeiro item.
+//.push('ex:prato'); adciona um novo item no array
+//.[0]= 'Manteiga'; altera o item 0 do array.
+//.length='batedeira';
+//unshift() = Adiciona um novo item no Início do Array
+// lista [lista.length] = 'liquidificador'; adciona um novo item no final do array;
+/*
+let lista = ['ovo', 'leite', 'acucar', 'farinha'];
+lista [lista.length] = 'liquidificador';
+let res = lista.toString(); //<----------
+
+console.log(res);
+*/
+//o uso de to.String transforma o array em string
+
+//MÉTODOS ARRAY (2/4)
+
+//(REMOVER) .splice(1, 4);  // os dois parametros significam: remover da numeração X ate a numeração W ex: do (1, 4) remove o item 1 ao 4.
+//(CONCATENAR ARRAYS) //EX: let res = lista.concat(lista2);  juntou os dois arrays em uma unica lista
+//(LISTAR EM ORDEM ALFABETICA) EX: lista.sort();
+//(Ordem alfabetica decrescente) lista.reverse(); -- precisa usar lista.sort(); na linha anterior.
+/*
+let lista = ['ovo', 'leite', 'acucar', 'farinha'];
+
+lista.sort();
+lista.reverse();
+
+let res = lista;
+
+console.log(res);
+*/
+//MÉTODOS ARRAY (3/4)
+
+//lista.map(function(item){return item * 2; }); - estamos multiplicando todos os itens do array por 2, e o resultado sera [90, 8, 18, 32, 50] o map serve para mapear (pegar todos os itens) o array.
+
+let lista = [45, 4, 9, 16, 25];
+
+lista = lista.map(function(item){
+    return item * 2;
+});
+
+console.log(lista);
 
