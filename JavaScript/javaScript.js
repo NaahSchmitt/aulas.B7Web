@@ -2606,7 +2606,7 @@ document.querySelector('#inserir').addEventListener('click', inserir);
 */
 //Promises com async/await
 //criando um código mais limpo usando o async e await
-
+/*
 async function clicou() {
  let response = await fetch('https://jsonplaceholder.typicode.com/posts');
  let json = await response.json();
@@ -2634,4 +2634,172 @@ async function inserir() {
 }
 
 document.querySelector('#botao').addEventListener('click', clicou);
-document.querySelector('#inserir').addEventListener('click', inserir);
+document.querySelector('#inserir').addEventListener('click', inserir); */
+
+// metodos string(1/3)
+/*
+let dinho = 'nanhany manoely';
+
+let resultado = dinho.length; //Para saber quantos caracteres tem na var nome.
+//ou pode ser feito direto no console ex: Console.log(resultado.lenght);
+//let resultado =dinho.indexOf('manoely'); 
+
+//-> Para ver se existe o nome manoely, neste caso ele retorna aposição do numero 
+//8 pq o manoely aparece a partir deste numero.
+console.log(resultado);
+
+*/
+
+/*
+let apelido = "deniz calabreso";
+
+let ap = apelido.indexOf('c');
+
+console.log(ap);
+// caso na che ele retorna -1
+
+
+let nat = 'Natiely Alves da Silva';
+
+let result = '';
+
+if (nat.indexOf ('Silva') > -1){
+  result = "achou";
+} else {
+  result = "nao achou";
+}
+
+console.log(result);
+
+*/
+//Métodos de String (2/3)
+
+
+/* --slice pega a posiçao do seu objeto/string. 
+let nome = "Natiely alves da silva";
+
+let resultado = nome.slice(0, 5); //vai pegar do 0 ao 5 = Natiel
+console.log(resultado);           // pode usar numero negativo ex: -4
+*/                              //começando a contagem inversa do fim ao começo
+
+/*  --substring
+let nome = "Natiely alves da silva";
+
+let resultado = nome.substring(0, 10);//substring funciona da mesmaa forma q slice
+console.log(resultado);              // porem só funciona no metodo padrão n funciona numero negativo
+
+*/
+/*
+let nome = "Natiely alves da silva";
+
+let resultado = nome.substr(3, 7); //iely al (aqui o funcionamento é difereente)
+console.log(resultado);         // ele pega da unidade x(3) e pega 7 unidas à frente. ele nao para no sete
+                  //ele conta mais 7 unidades. por issoneste exemplo ficou: iely al
+                //neste caso tbm pode fazrr com numero negativo. do final para o inicio.
+
+*/
+
+//Metodos string (3/3)  
+  /*
+
+let nome = "Natiely alves da silva";
+
+let resultado = nome.replace('alves', 'Magalhães');
+
+console.log(`Nome: ${nome}`);
+console.log(`Resultado: ${resultado}`); 
+//gerando uma nova var com um novo valor
+
+//se for só pra mudar a unica var nome é:
+// nome= nome.replace('alves', 'Magalhaes')
+
+
+*/
+//O uso do replace
+//Faz a troca de nomes
+//('primeiro escrever o nome q vai ser modificado', 'Nome qual desejar adcionar no lugar');
+
+/*
+let nme = "Natiely alves da silva";
+
+let teste = nme.toLowerCase().charAt(0);
+console.log(`Resultado: ${teste}`);
+
+*/
+//toUpperCase = Maiusculo
+//toLowerCase = Minusculo
+//trim= remove os espaços desnecessários tanto do começo quanto do fim de uma string.
+//charAt(1) = usado para saber qual carcatere está na posição (x);
+
+//let teste = nme + ' adcionandostring';    --> forma de concatenar 
+//let teste = nme.trim();
+
+//posso acessar algum caractere especial desta forma: (exemplo)
+//let nome = "nanhany"
+//let resultado = nome[2];
+//console.log(resultado)  = n   obs: lembrando q começa do zero a contagem
+
+//Transformando uma string em um array:
+/*
+let compras = "ovos Alface pão cebola tomate";
+
+let array = compras.toUpper Case().split(' ');
+
+
+console.log(array);
+
+*/
+
+
+
+/*
+let receita = 'Farinha ovos leite fermento';
+
+let bolo = receita.split(' ');
+
+console.log(bolo);
+
+*/
+
+
+//Métodos de Number
+
+//1-- O uso de to.String(); transforma o number em uma string.
+//note q no console quando number o numero fica azul.
+//quando string ele fica preto(sem cor alguma, como string);
+
+
+let one = 10;
+
+let res = one.toString();
+console.log(res);
+
+//2 -- to.fixed(); define o numero de decimais exibido depois do ponto.
+//ex temos um numero 12.542165, quantos decimais eu quero q exiba depois do ponto?
+
+let a = 14.5484562;
+
+let b = 'R$ ' + a.toFixed(2);
+console.log(b);
+//return R$ 14.54
+
+//3-- Tranformar uma string em number
+
+let n = '25';
+let m = parseInt(n) + 15;
+
+console.log(m);
+//return 40 (usamos uma soma de + 15 pra exibir q esta somando com number)
+//se fosse string seria 255 pq juntaria apenas o 5.
+
+//4-- parseFloat(também tranforma string em number) porém,
+// preserva números decimais. ex 25.9
+
+let x = '25.9';
+
+let y = parseFloat(x) + 5.1;
+console.log(y);
+
+
+//MÉTODOS DE ARRAY (1/4)
+
