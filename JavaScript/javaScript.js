@@ -2838,15 +2838,72 @@ let res = lista;
 
 console.log(res);
 */
+
+
 //MÉTODOS ARRAY (3/4)
 
-//lista.map(function(item){return item * 2; }); - estamos multiplicando todos os itens do array por 2, e o resultado sera [90, 8, 18, 32, 50] o map serve para mapear (pegar todos os itens) o array.
+//lista.map(function(item){return item * 2; }); - estamos multiplicando todos os itens do array por 2, 
+//e o resultado sera [90, 8, 18, 32, 50] o map serve para mapear (pegar todos os itens) o array.
+
+//FILTER (basicamente filtra seu array) neste ex: nós filtramosos os itens
+//usando uma função que filtra os numeros e retornaa os que são abaixo de 20.
+
+//EVERY- basicamente vai me dizer( se todos os numeros são maiores que 20, ele retorna um true
+// caso contrário ele retorna o valor false;) no nosso ex dá false pq temos numeros menores.
+
+//SOME (alguns-ingles) Significa que se existir pelo menos algum que for mais que 20 ele vai retornar como true.
+
 
 let lista = [45, 4, 9, 16, 25];
 
-lista = lista.map(function(item){
+/* lista = lista.map(function(item){
     return item * 2;
+}); */
+
+/* lista2 = lista.filter(function(item){
+  if (item <20){
+    return true;
+  } else{
+    return false;
+  }
+}); */
+
+/*pode amenizar esse código usando o ternario ex:
+lista2 = lista.filter(function(item){
+   return (item >20) ? true : false;
+  });
+*/ 
+
+lista2 = lista.some(function(item){
+    if (item > 20){
+      return true;
+    } else {
+      return false;
+    }
 });
 
-console.log(lista);
 
+lista= lista2;
+console.log(lista2);
+
+//exercicio - filtrando frontend
+
+let linguagens = [
+
+  {id: 1, nome: 'Java', tipo: 'Backend'},
+ 
+  {id: 2, nome: 'CSS', tipo: 'Frontend'},
+ 
+  {id: 3, nome: 'Ruby', tipo: 'Backend'},
+ 
+  {id: 4, nome: 'JavaScript', tipo: 'Frontend'},
+ 
+  {id: 5, nome: 'Node.js', tipo: 'Backend'},
+ 
+  {id: 6, nome: 'React.js', tipo: 'Frontend'},
+ 
+ ]
+ 
+ let linguagens2 = linguagens.filter((linguagens) => linguagens.tipo === "Frontend");
+ 
+ console.log(linguagens2);
