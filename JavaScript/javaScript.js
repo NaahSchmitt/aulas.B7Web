@@ -2853,10 +2853,10 @@ console.log(res);
 
 //SOME (alguns-ingles) Significa que se existir pelo menos algum que for mais que 20 ele vai retornar como true.
 
-
+/*
 let lista = [45, 4, 9, 16, 25];
 
-/* lista = lista.map(function(item){
+ lista = lista.map(function(item){
     return item * 2;
 }); */
 
@@ -2873,7 +2873,7 @@ lista2 = lista.filter(function(item){
    return (item >20) ? true : false;
   });
 */ 
-
+/*
 lista2 = lista.some(function(item){
     if (item > 20){
       return true;
@@ -2907,3 +2907,40 @@ let linguagens = [
  let linguagens2 = linguagens.filter((linguagens) => linguagens.tipo === "Frontend");
  
  console.log(linguagens2);
+*/
+
+
+
+//Métodos array (4/4)
+
+//FIND - usado para achar algum item especifico
+//FINDINDEX - usando para mostrar em qual posição esta o item (se achado kk)
+
+/*
+let lista = [45, 4, 9, 16, 25];
+let lsta2= [];
+
+lista2= lista.find(function(item){
+   return (item == 16) ? true: false;
+});
+
+let res = lista2;
+*/
+
+let lista = [
+  {id:1, nome:'Natiely', sobrenome:'Alves'},
+  {id:2, nome:'Denis', sobrenome:'Magalhaes'},
+  {id:3, nome: 'Nay', sobrenome:'Silva'}
+];
+
+let pessoa = lista.find(function(item){
+  return (item.sobrenome =='Silva') ? true: false;
+});  //Aqui ele acha o cidadao com sobrenome silva.
+
+/*  let pessoa = lista.find (function(item){
+  return (item.id == 3)? true: false;
+}); */ //aqui retorna todo o objeto do id 3
+
+let res = pessoa;
+
+console.log(res);
